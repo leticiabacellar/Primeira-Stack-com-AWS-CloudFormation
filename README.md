@@ -58,12 +58,6 @@ As imagens principais estão armazenadas na pasta `/images`:
 
 ```bash
 📁 dio-desafio-cloudformation
-┣ 📁 images
-┃ ┣ 01-criacao-stack.png
-┃ ┣ 02-template.png
-┃ ┣ 03-status-complete.png
-┃ ┗ 04-recursos-criados.png
-┣ 📄 template.yaml
 ┗ 📄 README.md
 
 ```
