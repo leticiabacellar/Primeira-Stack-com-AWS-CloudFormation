@@ -23,20 +23,52 @@ O objetivo deste laboratório é colocar em prática os conhecimentos adquiridos
 
 ## 🪜 Etapas Realizadas
 
-### 1️⃣ Acesso ao Console AWS
+### 1️⃣ Criando o template da Stack (Exemplo Prático)
+
+Vamos criar uma Stack de Firewall com Security Group que você poderá usar no laboratório.
+
+```bash
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Stack de Firewall para prática do bootcamp DIO
+
+Resources:
+  MeuSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: firewall-leticia
+      GroupDescription: Security Group para acesso SSH e HTTP
+      VpcId: vpc-12345678   # Substitua pelo ID da sua VPC
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0  # Apenas para teste
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0  # HTTP público
+      SecurityGroupEgress:
+        - IpProtocol: -1
+          CidrIp: 0.0.0.0/0  # Saída para qualquer destino
+
+```
+​
+## 🔹 Dica: Se você quiser criar em uma VPC real, substitua vpc-12345678 pelo ID correto da sua VPC.
+
+### 2️⃣ Acesso ao Console AWS
 Acessei o **AWS Management Console** e procurei pelo serviço **CloudFormation**.
 
-### 2️⃣ Criação da Stack
+### 3️⃣ Criação da Stack
 1. Cliquei em **Create stack → With new resources (standard)**;  
 2. Fiz o upload do arquivo **template.yaml** contendo a definição dos recursos;  
 3. Defini o nome da stack (ex: `MinhaPrimeiraStackDIO`);  
 4. Ajustei as permissões e parâmetros necessários;  
 5. Concluí a criação acompanhando o status até aparecer **“CREATE_COMPLETE”**.
 
-### 3️⃣ Validação da Criação
+### 4️⃣ Validação da Criação
 Após o provisionamento, verifiquei os **recursos criados automaticamente**, como VPCs, Security Groups, e instâncias EC2 (dependendo do template utilizado).
 
-### 4️⃣ Registro de Evidências
+### 5️⃣ Registro de Evidências
 Durante todo o processo, realizei capturas de tela e salvei na pasta `/images`, demonstrando:
 - Criação da stack;
 - Template utilizado;
