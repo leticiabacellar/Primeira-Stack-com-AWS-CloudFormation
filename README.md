@@ -77,15 +77,6 @@ Durante todo o processo, realizei capturas de tela e salvei na pasta `/images`, 
 
 ---
 
-## 📸 Evidências
-As imagens principais estão armazenadas na pasta `/images`:
-- `01-criacao-stack.png`
-- `02-template.png`
-- `03-status-complete.png`
-- `04-recursos-criados.png`
-
----
-
 ## 🧩 Estrutura do Repositório
 
 ```bash
