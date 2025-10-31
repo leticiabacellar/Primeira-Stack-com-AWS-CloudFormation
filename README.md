@@ -56,6 +56,7 @@ As imagens principais estão armazenadas na pasta `/images`:
 
 ## 🧩 Estrutura do Repositório
 
+```bash
 📁 dio-desafio-cloudformation
 ┣ 📁 images
 ┃ ┣ 01-criacao-stack.png
@@ -65,6 +66,7 @@ As imagens principais estão armazenadas na pasta `/images`:
 ┣ 📄 template.yaml
 ┗ 📄 README.md
 
+```
 
 ---
 
