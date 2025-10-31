@@ -22,8 +22,20 @@ O objetivo deste laboratório é colocar em prática os conhecimentos adquiridos
 ---
 
 ## 🪜 Etapas Realizadas
+​
+## 🔹 Dica: Se você quiser criar em uma VPC real, substitua vpc-12345678 pelo ID correto da sua VPC.
 
-### 1️⃣ Criando o template da Stack (Exemplo Prático)
+### 1️⃣ Acesso ao Console AWS
+Acessei o **AWS Management Console** e procurei pelo serviço **CloudFormation**.
+
+### 2️⃣ Criação da Stack
+1. Cliquei em **Create stack → With new resources (standard)**;  
+2. Fiz o upload do arquivo **template.yaml** contendo a definição dos recursos;  
+3. Defini o nome da stack (ex: `MinhaPrimeiraStackDIO`);  
+4. Ajustei as permissões e parâmetros necessários;  
+5. Concluí a criação acompanhando o status até aparecer **“CREATE_COMPLETE”**.
+
+### 3️⃣ Criando o template da Stack (Exemplo Prático)
 
 Vamos criar uma Stack de Firewall com Security Group que você poderá usar no laboratório.
 
@@ -52,18 +64,6 @@ Resources:
           CidrIp: 0.0.0.0/0  # Saída para qualquer destino
 
 ```
-​
-## 🔹 Dica: Se você quiser criar em uma VPC real, substitua vpc-12345678 pelo ID correto da sua VPC.
-
-### 2️⃣ Acesso ao Console AWS
-Acessei o **AWS Management Console** e procurei pelo serviço **CloudFormation**.
-
-### 3️⃣ Criação da Stack
-1. Cliquei em **Create stack → With new resources (standard)**;  
-2. Fiz o upload do arquivo **template.yaml** contendo a definição dos recursos;  
-3. Defini o nome da stack (ex: `MinhaPrimeiraStackDIO`);  
-4. Ajustei as permissões e parâmetros necessários;  
-5. Concluí a criação acompanhando o status até aparecer **“CREATE_COMPLETE”**.
 
 ### 4️⃣ Validação da Criação
 Após o provisionamento, verifiquei os **recursos criados automaticamente**, como VPCs, Security Groups, e instâncias EC2 (dependendo do template utilizado).
